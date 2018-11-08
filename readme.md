@@ -1,6 +1,6 @@
 # Project 3
 + By: *Catherine Lin*
-+ Production URL: <http://p3.yourdomain.com>
++ Production URL: <http://project3.vanillacandy.website>
 
 ## Outside resources
 *Your list of outside resources go here*

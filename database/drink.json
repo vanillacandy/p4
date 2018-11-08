@@ -1,0 +1,17 @@
+{
+  "milk": {
+    "calorie" : 103
+  },
+  "chocolate milk": {
+    "calorie" : 209
+  },
+  "soy milk": {
+    "calorie" : 131
+  },
+  "orange juice": {
+    "calorie" : 111
+  },
+  "apple juice": {
+    "calorie" : 113
+  }
+}

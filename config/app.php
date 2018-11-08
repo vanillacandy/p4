@@ -13,6 +13,12 @@ return [
     |
     */
 
+    'nav'=>[
+
+    ],
+
+
+
     'name' => env('APP_NAME', 'Laravel'),
 
     /*

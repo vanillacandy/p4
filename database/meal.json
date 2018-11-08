@@ -1,0 +1,17 @@
+{
+  "omelet": {
+    "calorie" : 94
+  },
+  "french toast": {
+    "calorie" : 149
+  },
+  "chicken waffle": {
+    "calorie" : 400
+  },
+  "bowl": {
+    "calorie" : 400
+  },
+  "ham eggs": {
+    "calorie" : 300
+  }
+}
