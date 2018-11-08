@@ -11,7 +11,7 @@
     <form method='GET' action='/food/search-process'>
 
         <fieldset>
-            <label for='searchTerm'>* Name </label>
+            <label >* Name </label>
             <input type='text' autocomplete='off' name='name' id='name' value='{{ old('name') }}'>
             @include('modules.field-error',['field'=>'name'])
         </fieldset>
