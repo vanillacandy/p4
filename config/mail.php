@@ -15,6 +15,7 @@ return [
     |            "sparkpost", "log", "array"
     |
     */
+    'supportEmail' => 'catherine.lin@boeing.com',
 
     'driver' => env('MAIL_DRIVER', 'smtp'),
 
