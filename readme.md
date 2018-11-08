@@ -6,7 +6,7 @@
 + Styling via [Boostrap CDN] (http://getbootstrap.com/)
 
 ## Packages
-*_ide_helper.php*
++ barryvdh/laravel-debugbar
 
 
 ## 3 Unique inputs
