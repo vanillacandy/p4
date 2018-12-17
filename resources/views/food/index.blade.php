@@ -11,7 +11,7 @@
     <form method='GET' action='/food/search-process'>
 
         <fieldset>
-            <label >* Name </label>
+            <label>* Name </label>
             <input type='text' autocomplete='off' name='name' id='name' value='{{ old('name') }}'>
             @include('modules.field-error',['field'=>'name'])
         </fieldset>
@@ -27,7 +27,8 @@
                 <li><label><input type='radio'
                                   name='meal'
                                   value='french toast'
-                                {{ (old('meal') == 'french toast') ? 'checked' : '' }}> Cinnamon Raisin French Toast </label>
+                                {{ (old('meal') == 'french toast') ? 'checked' : '' }}> Cinnamon Raisin French Toast
+                    </label>
                 <li><label><input type='radio'
                                   name='meal'
                                   value='chicken waffle'
@@ -35,7 +36,8 @@
                 <li><label><input type='radio'
                                   name='meal'
                                   value='breakfast bowl'
-                                {{ (old('meal') == 'breakfast bowl') ? 'checked' : '' }}> Country Breakfast Bowl </label>
+                                {{ (old('meal') == 'breakfast bowl') ? 'checked' : '' }}> Country Breakfast Bowl
+                    </label>
                 <li><label><input type='radio'
                                   name='meal'
                                   value='ham eggs'

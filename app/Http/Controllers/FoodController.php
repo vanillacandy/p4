@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
+
 class FoodController extends Controller
 {
     /*
@@ -34,16 +36,14 @@ class FoodController extends Controller
      * /books/search-process
      * Process the form to search for a book
      */
-    public function searchProcess(Request $request) {
-
+    public function searchProcess(Request $request)
+    {
         # Validate request data
         $request->validate([
             'name' => 'required',
             'meal' => 'required',
             'drink' => 'required',
         ]);
-
-
 
         $name = $request->input('name');
         $meal = $request->input('meal');
@@ -55,12 +55,9 @@ class FoodController extends Controller
         $mealsRawData = file_get_contents(database_path('/meal.json'));
         $meals = json_decode($mealsRawData, true);
 
-
         $drinkCalorie = 0;
-        foreach ($drinks as $drink_name => $calorie)
-        {
-            if ($drink == $drink_name)
-            {
+        foreach ($drinks as $drink_name => $calorie) {
+            if ($drink == $drink_name) {
                 $drinkCalorie = $calorie;
                 break;
             }
@@ -69,10 +66,8 @@ class FoodController extends Controller
         $drinkCalorie = $drinkCalorie["calorie"];
 
         $mealCalorie = 0;
-        foreach ($meals as $meal_name => $calorie)
-        {
-            if ($meal == $meal_name)
-            {
+        foreach ($meals as $meal_name => $calorie) {
+            if ($meal == $meal_name) {
                 $mealCalorie = $calorie;
                 break;
             }
@@ -89,7 +84,7 @@ class FoodController extends Controller
             'drink' => $drink,
             'drinkCalorie' => $drinkCalorie,
             'mealCalorie' => $mealCalorie,
-            'totalCalorie'=> $totalCalorie,
+            'totalCalorie' => $totalCalorie,
         ]);
     }
 
