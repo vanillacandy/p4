@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-    <h3>Breakfast Book is a small menu for daily breakfast meal and it calculates meal calories. Search below for your favorite.</h3>
+    <h3>This is a menu for daily breakfast. Search below for your favorite.</h3>
 
 
     @foreach($breakfasts as $breakfast)

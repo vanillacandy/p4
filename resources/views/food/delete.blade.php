@@ -2,22 +2,22 @@
 
 
 @section('title')
-    Confirm deletion: {{ $breakfast->name }}
+    <p2>Confirm deletion: {{ $breakfast->name }}</p2>
 @endsection
 
 @section('content')
-    <h1>Confirm deletion</h1>
+    <h3>Confirm deletion</h3>
 
-    <p>Are you sure you want to delete <strong>{{ $breakfast->name }}</strong>?</p>
+    <h3>Are you sure you want to delete <strong>{{ $breakfast->name }}</strong>?</h3>
 
     <form method='POST' action='/food/{{ $breakfast->id }}'>
         {{ method_field('delete') }}
         {{ csrf_field() }}
-        <input type='submit' value='Yes, delete it!' class='btn btn-danger btn-small'>
+        <input type='submit' value='cancel' class='btn btn-danger btn-small'>
     </form>
 
-    <p class='cancel'>
+    <h3>
         <a href='/books/{{ $breakfast->id }}'>No, I changed my mind.</a>
-    </p>
+    </h3>
 
 @endsection

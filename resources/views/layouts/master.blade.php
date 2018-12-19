@@ -34,6 +34,7 @@
 <footer>
 
     &copy; {{ date('Y') }}
+
 </footer>
 
 {{-- JS global to every page can be loaded here; jQuery included just as an example --}}
