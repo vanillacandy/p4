@@ -17,7 +17,7 @@ Pivot table(s):
 
 
 __Create__
-  + Visit <http://p4.vanillacandy.website/food/create> 
+  + Visit <http://p4.vanillacandy.website/food/create> or Click the title 'Morning Cafe' to the main page and click 'Add a breakfast menu'
   + Fill out form
   + Click *Add*
   + Observe confirmation message
@@ -26,23 +26,19 @@ __Read__
   + Visit <http://p4.vanillacandy.website/> see a listing of all books
   
 __Update__
-  + Visit <http://p4.vanillacandy.website/food/{id}/edit>; choose the Edit button next to one of the books
+  + Visit <http://p4.vanillacandy.website/food/1/edit>; Click the title 'Morning Cafe' to the main page and select Edit button. 
   + Make some edit to form
-  + Click *Save changes*
+  + Click *Edit*
   + Observe confirmation message
   
 __Delete__
-  + Visit <http://p4.vanillacandy.website/food/{id}/delete>; choose the Delete button next to one of the books
+  + Visit <http://p4.vanillacandy.website/food/1/delete>; Click the title 'Morning Cafe' to the main page and select Delete button. 
   + Confirm deletion
   + Observe confirmation message
 
 ## Outside resources
-*Your list of outside resources go here*
+*Styling via [Boostrap CDN] (http://getbootstrap.com/)
+*barryvdh/laravel-debugbar
 
-## Code style divergences
-*List any divergences from PSR-1/PSR-2 and course guidelines on code style*
-
-## Notes for instructor
-*Any notes for me to refer to while grading; if none, omit this section*
 
 

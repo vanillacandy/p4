@@ -28,7 +28,7 @@
             </ul>
         </div>
 
-        <input type='submit' value='Add' class='btn btn-primary'>
+        <input type='submit' value='Edit' class='btn btn-primary'>
     </form>
 
 
