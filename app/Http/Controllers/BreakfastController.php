@@ -79,16 +79,10 @@ class BreakfastController extends Controller
     {
         $breakfast = Breakfast::find($id);
 
+
         $ingredients = Ingredient::getForCheckboxes();
 
         $ingredientsForThisRecipe = $breakfast->ingredients()->pluck('ingredients.id')->toArray();
-        /*
-        if (!$breakfast) {
-            return redirect('/')->with([
-                'alert' => 'Book not found.'
-            ]);
-        }
-        */
 
         return view('food.edit')->with([
             'breakfast' => $breakfast,
@@ -126,11 +120,6 @@ class BreakfastController extends Controller
     {
         $breakfast = Breakfast::find($id);
 
-        /* TO FIX
-        if (!$book) {
-            return redirect('/books')->with('alert', 'Book not found');
-        }
-        */
         return view('food.delete')->with([
             'breakfast' => $breakfast,
         ]);
