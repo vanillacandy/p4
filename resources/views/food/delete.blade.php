@@ -13,7 +13,7 @@
     <form method='POST' action='/food/{{ $breakfast->id }}'>
         {{ method_field('delete') }}
         {{ csrf_field() }}
-        <input type='submit' value='cancel' class='btn btn-danger btn-small'>
+        <input type='submit' value='delete' class='btn btn-danger btn-small'>
     </form>
 
     <h3>
