@@ -36,17 +36,11 @@ body {
 
 
 .inputForm{
-    text-align: center;
     margin: 0 auto;
     height: 50px;
     width: 50%;
 }
-input{
-    padding:5px;
-    border:2px solid #ccc;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
+
 header {
     text-align: center;
     margin-top: 80px;
@@ -67,20 +61,17 @@ a:hover {
 }
 
 
-footer {
-    text-align: center;
-    background-color: hotpink;
-    font: italic bold 12px/20px Georgia;
-    /* sticky footer */
-    position: absolute;
+
+
+.footer {
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
-    height: 30px;
-    line-height: 30px; /* Vertically center the text there */
-
+    background-color: red;
+    color: white;
+    text-align: center;
 }
-
-
 
 
 /*----------------------------------------------------
@@ -112,15 +103,23 @@ p {
 /*----------------------------------------------------
 Forms
 -----------------------------------------------------*/
+input{
+    padding:1px;
+    border:1px #ccc;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type=text]:focus {
+    border-color:#333;
+}
+
+
+
 label, legend {
     display: block;
-    margin-top: 20px;
-    margin-bottom: 0;
-    text-align: left;
-    font-size: 1.1rem;
-    letter-spacing: .85px;
-    font-weight: bold;
-    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: normal;
 }
 
 ul.checkboxes {
@@ -144,7 +143,7 @@ ul.checkboxes label {
 .error {
     list-style-type: none;
     color: #a94442; /* reddish */
-    text-align: left;
+    text-align: -moz-center;
     margin: 0;
     padding: 0;
     font-size: 12px;
@@ -152,7 +151,7 @@ ul.checkboxes label {
 }
 
 .alert {
-    background-color: lightblue;
+    background-color: lightgoldenrodyellow;
     width: 100%;
     position: fixed;
     top: 0;

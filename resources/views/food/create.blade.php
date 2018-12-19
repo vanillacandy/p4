@@ -10,10 +10,15 @@
     <form method='POST' action='/food'>
         {{ csrf_field() }}
 
-        <div class='inputForm'>
-            <input type='text' name='title' id='title' placeholder='Enter a breakfast name..' value='{{ old('title') }}'></p>
-        </div>
+        Breakfast name: <input type='text' name='title' id='title'  value='{{ old('title') }}'></p>
         @include('modules.field-error', ['field' => 'title'])
+
+        Rating: <input type='text' name='rating' id='rating' value='{{ old('rating') }}'></p>
+        @include('modules.field-error', ['field' => 'rating'])
+
+        Calories: <input type='text' name='calories' id='calories'  value='{{ old('calories') }}'></p>
+        @include('modules.field-error', ['field' => 'calories'])
+
 
         <h3>Ingredients</h3>
         <div class='listbox2'>

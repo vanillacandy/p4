@@ -31,7 +31,8 @@ class BreakfastController extends Controller
         $breakfast = Breakfast::find($id);
 
         return view('food.show')->with([
-            'breakfast' => $breakfast
+            'breakfast' => $breakfast,
+
         ]);
     }
 
@@ -57,11 +58,15 @@ class BreakfastController extends Controller
         # Validate the request data
         $request->validate([
             'title' => 'required',
+            'rating' => 'required',
+            'calories' => 'required'
 
         ]);
 
         $breakfast = new Breakfast();
         $breakfast->name = $request->input('title');
+        $breakfast->rating = $request->input('rating');
+        $breakfast->calories = $request->input('calories');
 
 
         $breakfast->save();
@@ -98,6 +103,8 @@ class BreakfastController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
+            'rating' => 'required',
+            'calories' => 'required'
         ]);
 
         $breakfast = Breakfast::find($id);
