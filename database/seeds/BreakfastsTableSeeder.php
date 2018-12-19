@@ -14,7 +14,7 @@ class BreakfastsTableSeeder extends Seeder
     {
         $breakfasts = [
             ['Ham and Swiss Omelet'],
-            ['Sausage & Crescent Roll Casserole'],
+            ['Sausage and Crescent Roll Casserole'],
             ['Sweet Potato & Andouille Hash'],
             ['Peanut Butter Oatmeal'],
             ['Rise and Shine Parfait'],

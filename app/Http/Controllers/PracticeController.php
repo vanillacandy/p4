@@ -3,34 +3,99 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use IanLChapman\PigLatinTranslator\Parser;
 use App\Book;
+use App\Breakfast;
 use App\Utilities\Practice;
 class PracticeController extends Controller
 {
     /**
      *
      */
+    public function practice18()
+    {
+        $breakfasts = Breakfast::with('ingredients')->get();
+
+        foreach ($breakfasts as $breakfast) {
+            dump($breakfast->name . ' is tagged with: ');
+            foreach ($breakfast->ingredients as $ingredient) {
+                dump($ingredient->name . ' ');
+            }
+        }
+    }
+
+
+
     public function practice17()
     {
-        /*
-         *
-         $result = Book::orderBy('published_year', 'desc')->get();
-         dump($result->toArray());
-         */
+        $breakfast = Breakfast::where('name', '=', 'The Great Gatsby')->first();
+
+        dump($breakfast->name . ' is tagged with: ');
+        foreach ($breakfast->ingredients as $ingredient) {
+            dump($ingredient->name);
+        }
+    }
+
+    public function practiceDeleteBreakfast()
+    {
+        # First get a book to delete
+        $breakfast = Breakfast::where('name', '=', 'Banana bread')->first();
+
+        if (!$breakfast) {
+            dump('Did not delete- Book not found.');
+        } else {
+            $breakfast->delete();
+            dump('Deletion complete; check the database to see if it worked...');
+        }
+    }
+    public function practiceUpdateBreakfast()
+    {
         # First get a book to update
-        $book = Book::where('author', '=', 'J.K. Rowling')->first();
-        if (!$book) {
-            dump("Book not found, can't update.");
+        $breakfast = Breakfast::where('name', '=', 'chocolate bread')->first();
+
+        if (!$breakfast) {
+            dump("Breakfast not found, can't update.");
         } else {
             # Change some properties
-            $book->author = 'JK Rowling';
+            $breakfast->name = 'Banana bread';
 
             # Save the changes
-            $book->save();
+            $breakfast->save();
+
             dump('Update complete; check the database to confirm the update worked.');
         }
-
-
     }
+    public function practiceReadBreakfast()
+    {
+        #using facade instead initiated model
+        $breakfasts = Breakfast::where('name', 'LIKE', '%egg%')->get();
+
+
+        if ($breakfasts->isEmpty()) {
+            dump('No matches found');
+        } else {
+            foreach ($breakfasts as $breakfast) {
+                dump($breakfast->name);
+            }
+        }
+    }
+
+    public function practiceCreateBreakfast()
+    {
+        # Instantiate a new Book Model object
+        $breakfast = new Breakfast();
+
+        # Set the properties
+        # Note how each property corresponds to a field in the table
+        $breakfast->name = 'Chocolate bread';
+
+        # Invoke the Eloquent `save` method to generate a new row in the
+        # `books` table, with the above data
+        $breakfast->save();
+
+        dump('Added: '.$breakfast->name);
+    }
+
+
+
     /**
      *
      */

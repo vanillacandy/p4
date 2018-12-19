@@ -19,9 +19,12 @@
     @stack('head')
 </head>
 <body>
-
+@if(session('alert'))
+    <div class='alert'>{{ session('alert') }}</div>
+@endif
 <header>
-    <a href='/'><img src='/images/foobooks-logo@2x.png?80172489074' id='logo' alt='Foobooks Logo'></a>
+    <h1>Morning Cafe</h1>
+
 </header>
 
 <section id='main'>

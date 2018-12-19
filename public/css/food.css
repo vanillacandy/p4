@@ -1,56 +1,39 @@
-/* box sizing: http://www.paulirish.com/2012/box-sizing-border-box-ftw */
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-html {
-    font-size: 62.5%; /* http://snook.ca/archives/html_and_css/font-size-with-rem */
-    color: #111;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-    /* sticky footer */
-    position: relative;
-    min-height: 100%;
-}
 
 body {
     /* Default font-size */
     font-size: 1.6rem;
 
+    background-color: lightpink;
+
     /* sticky footer - match footer height */
     margin-bottom: 60px;
+
+    text-align: center;
+
 }
 
-section#main {
-    max-width: 600px;
-    width: 100%;
-    margin: auto;
-    padding-bottom: 20px;
-    text-align: center;
-}
 
 header {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 100px;
+    height: 100px;
+    font: italic bold 12px/30px Georgia;
 }
 
 #logo {
-    /* Actual width is 632; displaying at half-size for retina screens */
-    width: 316px;
+    width: 135px;
 }
 
 footer {
     text-align: center;
-    background-color: #eee;
-
+    background-color: hotpink;
+    font: italic bold 12px/30px Georgia;
     /* sticky footer */
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 60px;
-    line-height: 60px; /* Vertically center the text there */
+    height: 30px;
+    line-height: 30px; /* Vertically center the text there */
 }
 
 /*----------------------------------------------------
@@ -92,21 +75,26 @@ nav ul li a:hover {
 Typography
 -----------------------------------------------------*/
 
-a.active:link, a.active:visited, a.active:active, a.active:hover {
-    color: #18bc9c;
-}
 
 h1 {
     text-align: center;
-    font-size: 3.0rem;
+    font-size: 40px;
 }
 
 h2 {
-    font-size: 2.5rem;
+    font-size: 30px;
 }
 
 h3 {
-    font-size: 2.0rem;
+    font-size: 25px;
+    Color: #3d4852;
+    font:  bold 12px/30px "Arial Hebrew";
+}
+
+p {
+    font-size: 14px;
+    color: #606f7b;
+    font: italic bold 12px/30px "Apple Chancery";
 }
 
 /*----------------------------------------------------
@@ -140,6 +128,16 @@ input[type='checkbox'] + label {
     font-weight: normal;
 }
 
+ul.checkboxes {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.checkboxes label {
+    font-weight: normal;
+    margin: 0;
+}
+
 .btn {
     margin-top: 20px;
     font-size: 1.5rem;
@@ -156,38 +154,14 @@ input[type='checkbox'] + label {
 }
 
 .alert {
-    margin-top: 10px;
+    background-color: yellow;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
 }
 
-ul.alert {
-    list-style-type: none;
-}
 
-.success {
-    color: #3c763d; /* greenish */
-}
-
-.details {
-    font-size: 1.1rem;
-    font-style: italic;
-}
-
-/*----------------------------------------------------
-Misc
------------------------------------------------------*/
-/* Clear Fix: http://nicolasgallagher.com/micro-clearfix-hack/ */
-.cf:before,
-.cf:after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */
-}
-
-.cf:after {
-    clear: both;
-}
-
-.cf {
-    *zoom: 1;
-}
