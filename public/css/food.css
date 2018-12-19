@@ -3,22 +3,46 @@ body {
     /* Default font-size */
     font-size: 1.6rem;
 
-    background-color: hotpink;
+    background-color: lightpink;
 
-    background-image: linear-gradient(white, lightpink); /* Standard syntax (must be last) */
 
     /* sticky footer - match footer height */
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 
     text-align: center;
 
 }
 
+.listbox{
+    margin: 0 auto;
+    height: 300px;
+    width: 50%;
+    border:3px
+    solid lightcoral;
+    font:16px/26px Georgia, Garamond, Serif;
+    overflow:auto;
+    background-color: lightpink;
+}
+.listbox2{
+    margin: 0 auto;
+    height: 200px;
+    width: 50%;
+    border:3px
+    solid lightcoral;
+    font:16px/26px Georgia, Garamond, Serif;
+    overflow:auto;
+    background-color: lightpink;
+}
 
+.inputForm{
+    margin: 0 auto;
+    height: 70px;
+    width: 50%;
+}
 header {
     text-align: center;
-    margin-top: 100px;
-    height: 100px;
+    margin-top: 80px;
+    height: 80px;
     font: italic bold 12px/30px Georgia;
 }
 
@@ -26,17 +50,29 @@ header {
     width: 135px;
 }
 
+a {
+    font: normal bold 15px/10px Georgia;
+    color: mediumpurple;
+}
+a:hover {
+    color: rebeccapurple;
+}
+
+
 footer {
     text-align: center;
     background-color: hotpink;
-    font: italic bold 12px/30px Georgia;
+    font: italic bold 12px/20px Georgia;
     /* sticky footer */
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 30px;
     line-height: 30px; /* Vertically center the text there */
+
 }
+
+
 
 /*----------------------------------------------------
 Nav bar
@@ -95,7 +131,7 @@ h3 {
 p {
     font-size: 30px;
     color: #606f7b;
-    font: italic bold 12px/30px "Apple Chancery";
+    font: italic bold 18px/40px "Apple Chancery";
 }
 
 /*----------------------------------------------------
@@ -158,7 +194,7 @@ ul.checkboxes label {
 }
 
 .alert {
-    background-color: yellow;
+    background-color: lightblue;
     width: 100%;
     position: fixed;
     top: 0;

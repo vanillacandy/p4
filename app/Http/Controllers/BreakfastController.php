@@ -23,6 +23,18 @@ class BreakfastController extends Controller
         ]);
     }
 
+    /*
+     * GET /books/{id}
+     */
+    public function show(Request $request, $id)
+    {
+        $breakfast = Breakfast::find($id);
+
+        return view('food.show')->with([
+            'breakfast' => $breakfast
+        ]);
+    }
+
     /**
      * GET /books/create
      * Display the form to add a new book

@@ -7,6 +7,9 @@
 
 @section('content')
 
-    <h1>View {{ $breakfast }} summary</h1>
+    <h2>View {{ $breakfast->name }} summary</h2>
+    <h3>Rating: {{ $breakfast->rating }} </h3>
+    <h3>Calories: {{ $breakfast->calories }} </h3>
+
 
 @endsection

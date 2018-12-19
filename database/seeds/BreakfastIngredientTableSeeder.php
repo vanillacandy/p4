@@ -23,7 +23,10 @@ class BreakfastIngredientTableSeeder extends Seeder
             'Peanut Butter Oatmeal' => ['Oats', 'Peanut butter', 'Honey', 'Cinnamon'],
             'Sweet Potato & Andouille Hash' => ['Sausage', 'Sweet potatoes ', 'Celery', 'Onion'],
             'Ham and Swiss Omelet' => ['Ham', 'Eggs', 'Cheese'],
-            'Sausage and Crescent Roll Casserole' => ['Sausage', 'Eggs', 'Milk', 'Cheese']
+            'Sausage and Crescent Roll Casserole' => ['Sausage', 'Eggs', 'Milk', 'Cheese'],
+            'Hot Coffee'=>['Coffee'],
+            'Mocha'=>['Coffee'],
+            'Latte'=>['Coffee','Milk']
 
         ];
 

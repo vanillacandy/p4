@@ -33,7 +33,7 @@ Route::get('/', 'BreakfastController@index');
 Route::get('/food/create', 'BreakfastController@create');
 Route::post('/food', 'BreakfastController@store');
 
-# Show the form to edit a specific book
+# EDIT
 Route::get('/food/{id}/edit', 'BreakfastController@edit');
 # Process the form to edit a specific book
 Route::put('/food/{id}', 'BreakfastController@update');
@@ -46,9 +46,10 @@ Route::get('/food/{id}/delete', 'BreakfastController@delete');
 # Process the deletion of a book
 Route::delete('/food/{id}', 'BreakfastController@destroy');
 
-Route::get('/food/search', 'FoodController@search'); # <-- NEW 1 of 2
-Route::get('/food/search-process', 'FoodController@searchProcess'); # <-- NEW 2 of 2
-Route::get('/food/{title}', 'FoodController@search');
+# SHOW/SEARCH ID
+Route::get('/food/{id}', 'BreakfastController@show'); # <-- NEW 1 of 2
+Route::get('/food/', 'BreakfastController@index'); # <-- NEW 2 of 2
+
 
 
 

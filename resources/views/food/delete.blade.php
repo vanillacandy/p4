@@ -17,7 +17,7 @@
     </form>
 
     <h3>
-        <a href='/books/{{ $breakfast->id }}'>No, I changed my mind.</a>
+        <a href='/'>No, I changed my mind.</a>
     </h3>
 
 @endsection
