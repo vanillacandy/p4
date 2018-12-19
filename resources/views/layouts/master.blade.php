@@ -23,7 +23,7 @@
     <div class='alert'>{{ session('alert') }}</div>
 @endif
 <header>
-    <h1>Morning Cafe</h1>
+    <a href='/'><h1>Morning Cafe</h1></a>
 
 </header>
 
