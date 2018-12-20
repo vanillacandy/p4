@@ -58,8 +58,8 @@ class BreakfastController extends Controller
         # Validate the request data
         $request->validate([
             'title' => 'required',
-            'rating' => 'required',
-            'calories' => 'required'
+            'rating' => 'required|integer|between:1,5',
+            'calories' => 'required|integer|between:1,3000'
 
         ]);
 
@@ -103,8 +103,8 @@ class BreakfastController extends Controller
     {
         $this->validate($request, [
             'title' => 'required',
-            'rating' => 'required',
-            'calories' => 'required'
+            'rating' => 'required|integer|between:1,5',
+            'calories' => 'required|integer|between:1,3000'
         ]);
 
         $breakfast = Breakfast::find($id);

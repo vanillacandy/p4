@@ -6,19 +6,18 @@
 
 @section('content')
 
-    <h3>Edit a {{ $breakfast->name }} details</h3>
+    <h3>Edit a {{ $breakfast->name }} details *Required fields</h3>
 
     <form method='POST' action='/food/{{ $breakfast->id }}'>
         {{ method_field('put') }}
         {{ csrf_field() }}
-
-        Breakfast meal: <input type='text' name='title' id='title' value='{{ old('title', $breakfast->name) }}'>
+        * Breakfast meal: <input type='text' name='title' id='title' value='{{ old('title', $breakfast->name) }}'>
         @include('modules.field-error', ['field' => 'title'])
 
-        Rating: <input type='text' name='rating' id='rating' value='{{ old('rating', $breakfast->rating) }}'></p>
+        * Rating: (Please enter a number 1~5) <input type='text' name='rating' id='rating' value='{{ old('rating', $breakfast->rating) }}'></p>
         @include('modules.field-error', ['field' => 'rating'])
 
-        Calories: <input type='text' name='calories' id='calories' value='{{ old('calories',$breakfast->calories) }}'></p>
+        * Calories: (Please enter a number 1~3000) <input type='text' name='calories' id='calories' value='{{ old('calories',$breakfast->calories) }}'></p>
         @include('modules.field-error', ['field' => 'calories'])
 
         <h3>Ingredients</h3>

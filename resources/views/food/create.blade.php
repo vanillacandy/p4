@@ -5,18 +5,18 @@
 @endsection
 
 @section('content')
-    <h3>Add a breakfast recipe</h3>
+    <h3>Add a breakfast recipe. * Required fields</h3>
 
     <form method='POST' action='/food'>
         {{ csrf_field() }}
 
-        Breakfast name: <input type='text' name='title' id='title'  value='{{ old('title') }}'></p>
+        * Breakfast name:<input type='text' name='title' id='title'  value='{{ old('title') }}'></p>
         @include('modules.field-error', ['field' => 'title'])
 
-        Rating: <input type='text' name='rating' id='rating' value='{{ old('rating') }}'></p>
+        * Rating: (Please enter a number 1~5)<input type='text' name='rating' id='rating' value='{{ old('rating') }}'></p>
         @include('modules.field-error', ['field' => 'rating'])
 
-        Calories: <input type='text' name='calories' id='calories'  value='{{ old('calories') }}'></p>
+        * Calories: (Please enter a number 1~3000)<input type='text' name='calories' id='calories'  value='{{ old('calories') }}'></p>
         @include('modules.field-error', ['field' => 'calories'])
 
 

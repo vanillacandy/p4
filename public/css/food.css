@@ -5,7 +5,6 @@ body {
 
     background-color: lightpink;
 
-
     /* sticky footer - match footer height */
     margin-bottom: 30px;
 
@@ -68,7 +67,7 @@ a:hover {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: red;
+    background-color: hotpink;
     color: white;
     text-align: center;
 }
@@ -85,13 +84,18 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 35px;
 }
 
 h3 {
     font-size: 35px;
     Color: #3d4852;
     font:  normal 15px/35px "Arial Hebrew";
+}
+h4 {
+    font-size: 32px;
+    Color: rebeccapurple;
+    font:  normal 15px/35px "Apple Color Emoji";
 }
 
 p {
@@ -108,18 +112,28 @@ input{
     border:1px #ccc;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+    font:16px/26px Georgia, Garamond, Serif;
+
+
 }
+input { display: inline; }
 
 input[type=text]:focus {
     border-color:#333;
+
 }
 
 
 
-label, legend {
+legend {
     display: block;
     margin-top: 10px;
     font-weight: normal;
+}
+
+label {
+    padding: 6px 12px 12px 0;
+    display: contents;
 }
 
 ul.checkboxes {

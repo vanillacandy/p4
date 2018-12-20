@@ -30,12 +30,9 @@
 <section id='main'>
     @yield('content')
 </section>
-
-<footer>
-
-    &copy; {{ date('Y') }}
-
-</footer>
+<div class="footer">
+    {{ date('Y') }}
+</div>
 
 {{-- JS global to every page can be loaded here; jQuery included just as an example --}}
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'
